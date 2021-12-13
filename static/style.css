@@ -1,0 +1,47 @@
+body {
+  font-family: 'Georgia';
+  background-color: AntiqueWhite;
+}
+
+span.number {
+  font-weight: bold;
+}
+
+div.content {
+  margin: auto;
+  max-width: 640px;
+  background-color: white;
+  padding: 0px 40px;
+  border: 1px solid Sienna;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: lightgray;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+div.back {
+  margin: 20px 0px 10px 0px;
+  padding: 10px;
+}
+
+ul {
+  margin-bottom: 40px;
+}
+
+a {
+  color: Teal;
+}
+
+a:visited {
+  color: Teal;
+}
+
+a:hover {
+  color: LightSeaGreen;
+}

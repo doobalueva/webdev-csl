@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <title>Содержимое</title>
+</head>
+<body>
+
+<div class='content'>
+  <div class='back'>← <a class='back' href='/'>К списку текстов</a></div>
+  <ul>
+    {% for row in rows %}
+      <li><a href="{{url_for('view', num = row['id'])}}">{{row["name_long"]}}</li>
+    {% endfor %}
+  </ul>
+
+  {% for par in pars %}
+  {% if not loop.last %}
+    <p><span class='number'>{{par["order_id"]}}</span>: {{par["txt"]}}</p>
+    <hr>
+  {% else %}
+    <p><span class='number'>{{par["order_id"]}}</span>: {{par["txt"]}}</p>
+  {% endif %}
+  {% endfor %}
+</div>
+
+</body>
+</html>
