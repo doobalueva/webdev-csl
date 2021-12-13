@@ -2,7 +2,8 @@
 <html>
 <head>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-  <title>Содержимое</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <title>Богослужебные тексты</title>
 </head>
 <body>
 
@@ -16,10 +17,10 @@
 
   {% for par in pars %}
   {% if not loop.last %}
-    <p><span class='number'>{{par["order_id"]}}</span>: {{par["txt"]}}</p>
+    <p><span class='number'>{{par["order_id"]}}</span> {{par["txt"]}}</p>
     <hr>
   {% else %}
-    <p><span class='number'>{{par["order_id"]}}</span>: {{par["txt"]}}</p>
+    <p><span class='number'>{{par["order_id"]}}</span> {{par["txt"]}}</p>
   {% endif %}
   {% endfor %}
 </div>

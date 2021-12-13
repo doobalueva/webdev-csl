@@ -2,12 +2,14 @@
 <html>
 <head>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-  <title>Список</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <title>Богослужебные тексты</title>
 </head>
 <body>
 
 <div class='content'>
   <h1>Богослужебные тексты</h1>
+  <p>Церковнославянские тексты в гражданской графике</p>
   <ul>
       {% for row in rows %}
         <li><a href="{{url_for('view', num = row['id'])}}">{{row["name_long"]}}</li>
